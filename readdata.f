@@ -18,8 +18,9 @@ cc      character*70 linestring,file_dum
       real*8 proj(mnpw*2,mnpw*2)
       complex*16 zz_st(mnpw*2,mnpw*2,mns)
       integer iproj(mns),ipcbm(mns),iflag(mns)
+      !common 语句开辟公区,斜杠中间是区域名称,后面是包含的变量,老用法
       common  /comproj/zz_st,iproj,ipcbm
-      common /EcutSmth/Ecut_t,Smth_t,scalkin_t
+      common  /EcutSmth/Ecut_t,Smth_t,scalkin_t
 
 
       type (fitdata) tempdata
@@ -34,12 +35,12 @@ c -----------------------------------------------
          read(4,*)structfile(i)
          read(4,*)ng1(i),ng2(i),ng3(i)
          read(4,*)inputfile(i)
-	 read(4,*)iproj(i),ipcbm(i),file_dum
+	      read(4,*)iproj(i),ipcbm(i),file_dum
          read(4,*)xpt(1,i),xpt(2,i),xpt(3,i)
          read(4,*)
       if(iproj(i).eq.1) then
       open(10,file=file_dum,form="unformatted")
-      rewind(10)
+      rewind(10)   !回到文件头部
       read(10) iflag(i),npw_t
       read(10) ((zz_st(j1,j2,i),j1=1,npw_t),j2=1,npw_t)
       close(10)
