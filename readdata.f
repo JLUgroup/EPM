@@ -37,21 +37,21 @@ c -----------------------------------------------
          read(4,*)inputfile(i)
 	      read(4,*)iproj(i),ipcbm(i),file_dum
          read(4,*)xpt(1,i),xpt(2,i),xpt(3,i)
-         read(4,*)
-      if(iproj(i).eq.1) then
-      open(10,file=file_dum,form="unformatted")
-      rewind(10)   !回到文件头部
-      read(10) iflag(i),npw_t
-      read(10) ((zz_st(j1,j2,i),j1=1,npw_t),j2=1,npw_t)
-      close(10)
-      endif
+         read(4,*)!-空读语句跳分割线--------------------------------------------
+         if(iproj(i).eq.1) then
+            open(10,file=file_dum,form="unformatted")
+               rewind(10)   !回到文件头部
+               read(10) iflag(i),npw_t
+               read(10) ((zz_st(j1,j2,i),j1=1,npw_t),j2=1,npw_t)
+            close(10)
+         endif
       end do
-      read(4,*)npseudofile
+      read(4,*)npseudofilenpseudofile
       allocate(pseudofile(npseudofile))
       do i=1,npseudofile
          read(4,*)pseudofile(i)
       end do
-      read(4,*)
+      read(4,*)!---------------------------------------------------------
       read(4,*) iSOps
 
       do i=1,nstruct
@@ -63,7 +63,7 @@ c -----------------------------------------------
 
       if (iSOps==1) write(6,*)'Spin-Orbit interaction is ON'
       if (iSOps==0) write(6,*)'Spin-Orbit interaction is OFF'
-      read(4,*)
+      read(4,*)!---------------------------------------------------------
       read(4,*)ifit_sig
       read(4,*)sigma0
       write(6,*)'Reweight of KE term ',sigma0
@@ -82,9 +82,11 @@ c -----------------------------------------------
 
       write(6,*) "debug: close fit.d file "
       nparam=0
-      if (ifit_sig/=0) nparam=1
+      if (ifit_sig/=0) nparam=1    !如果ifit_sig不等于0,则需要fit的参数加一
 c -----------------------------------------------
 c set Initial bounds for pseudopotential parameters
+c 设置赝势初始界限,手动赋值
+c 小数点后面的0省略了,d的意思是双精度数,大多数初始数据都是双精度的
 c -----------------------------------------------
       psSO0L(:)=0.d0
       psSO0U(:)=2.d0
@@ -97,7 +99,7 @@ c -----------------------------------------------
       psa0L(:,:)=0.d0
       psa0U(:,:)=300.d0
       psb0L(:,:)=0.d0
-      psb0U(:,:)=dsqrt(20.d0)
+      psb0U(:,:)=dsqrt(20.d0) !双精度平方根
       psc0L(:,:)=0.d0
       psc0U(:,:)=10.d0
 c -----------------------------------------------
@@ -106,24 +108,29 @@ c -----------------------------------------------
       itotps=0
       do i=1,npseudofile
          open (unit=4,file=pseudofile(i),status='old')
-         read (4,*) nps, pstype
-         if(itotps.eq.0) pstype0=pstype
+         read (4,*) nps, pstype 
+         !当执行语句只有一条的时候可以省略then以及endif
+         if(itotps.eq.0) pstype0=pstype 
          if(pstype.ne.pstype0) then
          write(6,*) "EPM format is inconsistent, stop"
          stop
          endif
 
          read (4,*) Ecut_t, Smth_t, scalkin_t
-
+         !dabs双精度实数绝对值
          if(dabs(Ecut_t-ecut_all)+dabs(Smth_t-smth_all)+
-     &       dabs(scalkin_t-Sigma0).gt.0.01) then
+     &       dabs(scalkin_t-Sigma0).gt.0.01) then !大于greater than
          write(6,*) "Ecut,Smth and Sigma(scalkin) in fit.d and\
      &     pseudo.xx.fit do not agree, stop"
            stop
            endif
+c***** 接下来是一系列的判断赝势文件类型并且依据具体类型进行数据的读入的过程****
 c***** format 5 or 51 *********************************
+c* 对于pot type为5,或者51的赝势
 c* in this special format, 5, some parameters are fixed.
          if(pstype.eq.5.or.pstype.eq.51) then
+         !do语句后面多出来的数字可能是label有代替enddo的作用
+         !我猜是用于区分不同的循环块
          do 10 ips=1,nps
             itotps=itotps+1
             ngauss(itotps)=2
@@ -162,7 +169,7 @@ c* set bounds of parameters
             read (4,*) psb(1,itotps),mvpsb(1,itotps)
             read (4,*) psc(1,itotps),mvpsc(1,itotps)
             read (4,*) psa(2,itotps),mvpsa(2,itotps)
-
+         !自旋轨道作用关闭的时候moveSO不能等于1
           if(iSOps.eq.0.and.moveSO(itotps).eq.1) then
           write(6,*) "iSOps=0 in fit.d, but moveSO.eq.1 in pseudo, stop"
           stop
@@ -173,21 +180,22 @@ c* set bounds of parameters
      &    mvpsa(2,itotps)
  10      continue
 c***** format 1 *********************************
+c* 对于pot type为1的赝势
       else if(pstype.eq.1) then
          do 20 ips=1,nps
          itotps=itotps+1
          read(4,*)
          read(4,*) psname(itotps),psnum(itotps)
-         read(4,*) psvol(itotps),ngauss(itotps)     
-         read(4,*) psSO(itotps),moveSO(itotps)
-         read(4,*) psfvol(itotps), mvpsf(itotps)
-         read(4,*) psbeta(itotps), mvpsbeta(itotps)
-         nparam=nparam+moveSO(itotps)+mvpsf(itotps)+mvpsbeta(itotps)
+         read(4,*) psvol(itotps),ngauss(itotps)     !norm. atomic volume,ngauss
+         read(4,*) psSO(itotps),moveSO(itotps)      !SO param
+         read(4,*) psfvol(itotps), mvpsf(itotps)    !af param for strain
+         read(4,*) psbeta(itotps), mvpsbeta(itotps) !beta param
+         nparam=nparam+moveSO(itotps)+mvpsf(itotps)+mvpsbeta(itotps) !统计需要拟合的参数量
 
          do 30 j=1,ngauss(itotps)
          read(4,*) psa(j,itotps),psb(j,itotps),psc(j,itotps),
      &     mvpsa(j,itotps), mvpsb(j,itotps), mvpsc(j,itotps)
-         nparam=nparam+mvpsa(j,itotps)+mvpsb(j,itotps)+mvpsc(j,itotps) 
+         nparam=nparam+mvpsa(j,itotps)+mvpsb(j,itotps)+mvpsc(j,itotps) !统计需要拟合的参数量
 30       continue
 
 c* set bounds of parameters for format 1
@@ -350,7 +358,7 @@ c* set bounds of parameter for format 54
       write(6,*)'There are a total of',nparam,'parameters to be fitted'
       write(6,*)
 
-      
+      !把读进来的psudo值赋给初始化的值(被赋值的变量应该在epm.inc里面定义了)
       do 110 ips=1,itotps
          psvol0(ips)=psvol(ips)
          psf0(ips)=psfvol(ips)
@@ -378,15 +386,18 @@ c -----------------------------------------------
             write(6,*)'    --------------       -----     ------',
      &        '    ------'
 
-            read(7,*)
+            read(7,*)   !两个read越过7文件开头的两行
             read(7,*)
          data:  do ii=1,100
+         !调用getline函数用来此时的读行状态
+         !如果不是注释或者空行或者文件末尾则继续读取,如果不是数据行则跳过不读取
          call getline(7,linestring,ierr)
          if (ierr==1) goto 2000
          if (ierr==2) goto 2000
          read(linestring,*) tempdata
          nproperty = nproperty + 1
          nsprop(i)=nsprop(i) + 1
+         !tempdata结构体变量中的property
          select case (tempdata%property)
             case('eg1v') 
                ieg1v(i) = nsprop(i)
