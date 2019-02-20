@@ -46,7 +46,7 @@ c -----------------------------------------------
             close(10)
          endif
       end do
-      read(4,*)npseudofilenpseudofile
+      read(4,*)npseudofile
       allocate(pseudofile(npseudofile))
       do i=1,npseudofile
          read(4,*)pseudofile(i)
