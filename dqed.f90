@@ -7266,7 +7266,7 @@ subroutine dqedmn ( dqedev, mequa, nvars, mcon, ind, bl, bu, x, fjac, &
 !
 !  Set "INFINITY" ON THIS MACHINE.
 !
-  fb = huge ( fb )
+  fb = huge ( fb )    !fortran的内置函数:查找最大数
   dxnrm = fb
   fl = 0.0D+00
 !
@@ -7739,7 +7739,7 @@ subroutine dqedmn ( dqedev, mequa, nvars, mcon, ind, bl, bu, x, fjac, &
              b(j) = alpha*bb(j)
          else
              xb(j) = x(j)
-             b(j) = sign(alpha*bb(j),dx(j)) + bboost*dx(j)
+             b(j) = sign(alpha*bb(j),dx(j)) + bboost*dx(j)  !sign函数取前面数的绝对值,后面的符号
          end if
          bb(j) = sign(min(sqrt( huge ( bb(j) ) ),abs(b(j))),b(j))
       end do

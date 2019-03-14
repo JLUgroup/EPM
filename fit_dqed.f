@@ -48,7 +48,7 @@ ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 ccc read input files      
 c
       call readdata(nparam)
-      nparamf=nparam
+      nparamf=nparam    !确定有多少个参数需要fit
 
       numiter=0
       numiter1=0
@@ -161,6 +161,7 @@ c check the initial EPM parameters
       call funjwl(fx,iopt,mcon,mequa,nvars,ropt,x)
 
 c Call the program
+c 调用一个可以解带线性约束的非线性方程的程序(2002年编写的) 
 c 
       call dqed ( dqedhdjwl, mequa, nvars, mcon, ind, bl, bu, x, fj, 
      &   ldfj, fnorm, igo, iopt, ropt, iwork, work )
