@@ -1,0 +1,24 @@
+    2       1             ! num_pot, pot. type
+ 6.88000  0.80000  1.00000           ! Ecut, Smth, scalkin
+
+ Zn       30052       ! Atom, atomic_num
+ 2.6280000000000E+02      4          !norm. atomic volume, ngauss
+ 7.7082696578741E-26      1          !SO param
+ 9.4170047372392E-01      1          !af param for strain
+ 0.0000000000000E+00      0          !beta param
+-5.1536162474013E-01  0.0000000000000E+00  2.4353582903599E+00   1  0  1  !gaussian's param
+-9.2951632523749E-02  2.7589362739958E+00  5.4723404451951E+00   1  1  1  !gaussian's param
+ 1.2579123071549E+00 -1.0355752559867E+00  2.2858334878692E+00   1  1  1  !gaussian's param
+ 4.6641919463672E-02  1.9800709306712E+00  9.9999992316166E+00   1  1  1  !gaussian's param
+
+ Te       52030       ! Atom, atomic_num
+ 1.4520000000000E+02      4          !norm. atomic volume, ngauss
+ 3.2751136877739E-01      1          !SO param
+ 0.0000000000000E+00      0          !af param for strain
+ 0.0000000000000E+00      0          !beta param
+-1.5340029266995E+00  0.0000000000000E+00  1.3225910506160E+00   0  0  0  !gaussian's param
+-1.0764813542513E-06  8.3017997073139E-01  6.6622445438183E+00   0  0  0  !gaussian's param
+-1.4551274173559E-02  8.8005298214158E-21  2.4285984751984E-01   0  0  0  !gaussian's param
+ 8.6471412439098E-02  1.1630910438641E-01  1.1057752965712E-01   0  0  0  !gaussian's param
+ 1.0000000000000E+00      0          !kin_scal param
+

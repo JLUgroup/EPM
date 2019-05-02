@@ -1,0 +1,34 @@
+Property	Expt. Valu     SO Value	       Weight    eps_paral eps_perp
+--------	-----------	----------	------   --------  -------
+eg1v		-11.75d0	-12.97d0	1.0d0	   # GW-PP, PRB71,045207(2005)
+evbm		-5.35970519     -5.35970519    700.d0 # Lijun: for pot from Zhibin
+eg1c       1.74     1.74   200.d0     # Lijun: from LB
+eg15c		 6.45d0		 6.45d0		2.0d0	
+ex1v		-10.95d0	-12.41d0	0.5d0      # GW-PP, PRB71,045207(2005)
+ex3v		-3.57d0		-4.36d0		0.5d0      # GW-PP, PRB71,045207(2005)
+ex5v		-1.34d0		-2.05d0		2.0d0      # GW-PP, PRB71,045207(2005)
+ex1c		 3.35d0		 3.95d0		3.d0      # GW-PP, PRB71,045207(2005)
+ex3c		 4.14d0		 4.14d0		2.0d0
+el1v		-11.18d0	-12.54d0        0.1d0      # GW-PP, PRB71,045207(2005)
+el2v		-3.72d0		-4.75d0		0.5d0      # GW-PP, PRB71,045207(2005)
+el3v		-0.50d0		-0.78d0		2.0d0      # GW-PP, PRB71,045207(2005)
+el1c		 3.14d0		 3.39d0		5.d0      # GW-PP, PRB71,045207(2005)
+mg1c		 0.12d0		 0.12d0	        25.d0
+#ml1cl            1.9d0           1.9d0         5.0d0
+#ml1ct            0.075d0         0.075d0       5.0d0
+#mx1cl            1.3d0           1.3d0         5.d0
+#mx1ct            0.23d0          0.23d0        1.d0
+mghh100	         0.90d0		 0.90d0		10.d0
+mghh110	         1.70d0		 1.70d0		2.d0
+mghh111          2.14d0          2.14d0         0.5d0
+mglh100	         0.18d0		 0.18d0	        2.0d0
+mglh110	         0.16d0		 0.16d0	        1.0d0
+mglh111	         0.16d0		 0.16d0	        1.0d0
+dpa             -2.90d0         -2.90d0         20.d0       # S.H.Wei PRB (2006)
+dpag15v          0.90d0          0.90d0         10.d0        # S.H.Wei PRB (1999)
+dpaGX            1.03d0          1.03d0         3.d0        # S.H.Wei PRB (1999)
+dpaGL           -2.19d0         -2.19d0         3.d0        # S.H.Wei PRB (1999)
+dpb100          -1.2d0          -1.2d0          20.d0
+edso0           0.41d0         0.42d0           30.d0       # PRB 50, 8012(1994)
+edso1          0.41d0         0.20d0           1.d0        # LB
+

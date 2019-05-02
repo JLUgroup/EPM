@@ -1,0 +1,16 @@
+2	! Pseudopotential type (1 => 4 Gaussians, 2 => new form)
+
+49015 (In with P)
+------------------
+0.00		! Spin orbit scaling parameter
+0  0  0		! Which parameters to fit
+1  1  1
+1  0  0
+
+15049 (P with In)
+------------------
+0.00		! Spin orbit scaling parameter
+0  0  0		! Which parameters to fit
+1  1  1
+1  0  0
+

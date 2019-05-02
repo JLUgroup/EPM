@@ -1,0 +1,68 @@
+    4       1             ! num_pot, pot. type
+ 6.88000  0.80000  1.00000           ! Ecut, Smth, scalkin
+ 
+ Cd       48034       ! Atom, atomic_num
+ 2.6280000000000E+02      4          !norm. atomic volume, ngauss
+ 2.2724243077632E-03      1          !SO param
+ 0.0000000000000E+00      0          !af param for strain
+ 0.0000000000000E+00      0          !beta param
+-4.0288075821522E-01  0.0000000000000E+00  1.5684983351152E+00   1  0  1  !gaussian's param
+-6.2748363346481E-04  2.6347063328147E+00  5.0803785696212E+00   1  1  1  !gaussian's param
+ 1.2558125930534E+00 -7.9437786794472E-01  3.0219972825703E+00   1  1  1  !gaussian's param
+ 1.0101523781726E-01  1.7388654037772E+00  3.6220240093659E+00   1  1  1  !gaussian's param
+ 
+ Se       34048       ! Atom, atomic_num
+ 1.4520000000000E+02      4          !norm. atomic volume, ngauss
+ 1.1212651239361E-01      1          !SO param
+ 9.2704514233952E-02      1          !af param for strain
+ 0.0000000000000E+00      0          !beta param
+-1.4024277019006E+00  0.0000000000000E+00  9.4235721626835E-01   1  0  1  !gaussian's param
+-7.7572547791604E-07  7.0337054253436E-02  1.0712292050276E-01   1  1  1  !gaussian's param
+-1.1621306034378E-02  1.2561065409441E+00  2.7262126245165E-01   1  1  1  !gaussian's param
+ 9.4732688461830E-02  5.1154227430957E-02  1.9820528973722E-01   1  1  1  !gaussian's param
+ 
+ Cd       48052       ! Atom, atomic_num
+ 2.6280000000000E+02      4          !norm. atomic volume, ngauss
+ 8.8972055609650E-02      1          !SO param
+ 0.0000000000000E+00      0          !af param for strain
+ 0.0000000000000E+00      0          !beta param
+-4.8705551709767E-01  0.0000000000000E+00  1.7613949404010E+00   1  0  1  !gaussian's param
+-1.0084513691575E-03  4.4720485355719E+00  2.0174123907772E+00   1  1  1  !gaussian's param
+ 1.3477948602892E+00 -9.7768633502503E-01  2.6436024745007E+00   1  1  1  !gaussian's param
+ 9.8808015524099E-02  1.5553448102821E+00  7.5567193200987E+00   1  1  1  !gaussian's param
+ 
+ Te       52048       ! Atom, atomic_num
+ 1.4520000000000E+02      4          !norm. atomic volume, ngauss
+ 3.2414391887604E-01      1          !SO param
+ 1.1829702933369E-01      1          !af param for strain
+ 0.0000000000000E+00      0          !beta param
+-1.4094011588910E+00  0.0000000000000E+00  1.1150024892358E+00   1  0  1  !gaussian's param
+-1.7861000187746E-07  3.6969193738614E-01  2.5819898624988E-01   1  1  1  !gaussian's param
+-2.1429545602949E-02  1.0359056313595E+00  1.0053605508447E-01   1  1  1  !gaussian's param
+ 8.6271650539872E-02  1.7407077200554E-01  1.1940201490672E-01   1  1  1  !gaussian's param
+ 1.0000000000000E+00      0          !kin_scal param
+ 
+ SO calc.
+ **************************
+ Results for structure SQS8.CdSe25Te75.config        
+X-point:  1.00000  0.00000  0.00000
+The 64th state is the VBM of SQS8.CdSe25Te75.conf
+   Property       Ideal_Value   fitted_Value  Error    Weighted_Err**2   Weight
+   --------             ------   -------     -----     ------------
+ 
+eg1c               1.40063   1.06697419  -0.33365081     141.86675138    50.000
+ Results for structure SQS8.CdSe50Te50.config        
+X-point:  1.00000  0.00000  0.00000
+The 64th state is the VBM of SQS8.CdSe50Te50.conf
+   Property       Ideal_Value   fitted_Value  Error    Weighted_Err**2   Weight
+   --------             ------   -------     -----     ------------
+ 
+eg1c               1.42000   0.76018860  -0.65981140     539.76279935    50.000
+ Results for structure SQS8.CdSe75Te25.config        
+X-point:  1.00000  0.00000  0.00000
+The 64th state is the VBM of SQS8.CdSe75Te25.conf
+   Property       Ideal_Value   fitted_Value  Error    Weighted_Err**2   Weight
+   --------             ------   -------     -----     ------------
+ 
+eg1c               1.53313   0.51973831  -1.01338669    4369.13293276   100.000
+ Total Error =    5050.76248348427     

@@ -1,0 +1,37 @@
+Property	Expt. Valu     SO Value	       Weight    eps_paral eps_perp
+--------	-----------	----------	------   --------  -------
+eg1v		-11.07d0 	-11.59d0	1.0d0	     # GW-PP, PRB71,045207(2005)
+#evbm		-4.9390	        -4.9390	        700.d0       # S.H. Wei APL(2009)
+evbm		-4.63391418	-4.63391418     700.d0       # S.H. Wei APL(2009)
+#eg1c		 1.59d0  	 1.59d0         200.d0       # Cohen, PRB(1976)
+eg1c		 1.475d0  	 1.475d0         200.d0       # Changed to exp. ~1.5
+eg15c		 5.36d0	 	 5.36d0		2.0d0	     # Cohen, PRB(1976)
+ex1v		-9.12d0	        -11.04d0        0.5d0        # GW-PP, PRB71,045207(2005)
+ex3v		-5.05d0	 	-4.57d0		0.5d0        # GW-PP, PRB71,045207(2005)
+ex5v		-1.60d0	 	-2.05d0		3.0d0        # GW-PP, PRB71,045207(2005)
+ex1c		 3.48d0	 	 3.29d0		5.0d0        # GW-PP, PRB71,045207(2005)
+ex3c		 3.95d0	 	 3.95d0		2.0d0        # Cohen, PRB(1976)
+el1v		-9.64d0  	-11.16d0        0.1d0        # GW-PP, PRB71,045207(2005)
+el2v		-4.73d0	 	-4.76d0		0.5d0        # GW-PP, PRB71,045207(2005)
+el3v		-0.65d0	 	-0.85d0		2.0d0        # GW-PP, PRB71,045207(2005)
+el1c		 2.82d0	 	 2.70d0		5.d0        # GW-PP, PRB71,045207(2005)
+el3c		 6.18d0	 	 6.18d0	        2.0d0        # Cohen, PRB(1976)
+mg1c		 0.128d0 	 0.128d0        30.0d0       # Penna, JEM38,1717(2009)
+#ml1cl            1.9d0            1.9d0          5.0d0       # 
+#ml1ct            0.075d0          0.075d0        3.0d0
+#mx1cl            1.3d0            1.3d0          10.d0
+#mx1ct            0.23d0           0.23d0         1.d0
+mghh100	         1.315d0 	 1.315d0        15.0d0        # Penna, JEM38,1717(2009)
+mghh111          2.565d0         2.565d0        0.5d0        # Penna, JEM38,1717(2009)
+mghh110          2.092d0         2.092d0        0.5d0        # Penna, JEM38,1717(2009)
+mglh100	         0.166d0 	 0.166d0        1.0d0        # Penna, JEM38,1717(2009)
+mglh111	         0.157d0 	 0.157d0        1.0d0        # Penna, JEM38,1717(2009)
+dpa             -3.70d0         -3.70d0         20.0d0       # S.H. Wei PRB(2006)
+dpag15v          0.89d0          0.89d0         10.0d0       # S.H. Wei PRB(2006)
+dpaGX            1.44d0          1.44d0         8.0d0        # S.H. Wei PRB(2006)
+dpaGL           -1.88d0         -1.88d0         8.0d0        # S.H. Wei PRB(2006)
+dpb100          -1.2d0          -1.2d0          10.d0        #
+edso0		 0.89d0	 	 0.89d0	        30.0d0       # Cohen, PRB(1976)
+edso1		 0.53d0	 	 0.53d0	        5.0d0        # Cohen, PRB(1976)
+edso2		 0.38d0	 	 0.38d0	        2.0d0        # Cohen, PRB(1976)
+

@@ -1,0 +1,113 @@
+June 23 2011   4:26:04.289 PM
+ Spin-Orbit interaction is ON
+ Reweight of KE term    1.00000000000000     
+ Fixed Reweight
+ debug: close fit.d file 
+ Read in a total of            2  pseudopotentials
+ There are a total of           3 parameters to be fitted
+ 
+ Reading expt. data from input.CdSe                    
+     Input Quantity      Non So.      S.O.    weight
+     --------------       -----     ------    ------
+  evbm                  -5.35971    -5.35971   100.00000
+  eg1c                   1.76061     1.76061    50.00000
+  dpa                   -2.90000    -2.90000   100.00000
+  dpag15v                0.90000     0.90000    20.00000
+           4  Properties to be fitted for bulkCdSe.config               
+ 
+           4  total expt. properties to be fitted
+ 
+ Reading in structure bulkCdSe.config               
+ Initial EPM:
+ 
+ Iteration no.            1
+ Values of the pseudopotential parameters
+ ----------------------------------------
+ Weight of Kinetic Energy   1.00000000000000     
+ 
+ 6.88000  0.80000  1.00000           ! Ecut, Smth, scalkin
+ 
+ Cd       48034       ! Atom, atomic_num
+ 2.6280000000000E+02      4          !norm. atomic volume, ngauss
+ 5.6823035175370E-02      1          !SO param
+ 9.0499895622722E-01      1          !af param for strain
+ 0.0000000000000E+00      0          !beta param
+-4.9480400000000E-01  0.0000000000000E+00  2.2508400000000E+00   0  0  0  !gaussian's param
+-8.8119900000000E-03  3.5127900000000E+00  2.3379600000000E+00   0  0  0  !gaussian's param
+ 1.1256500000000E+00 -1.0642300000000E+00  3.2992700000000E+00   0  0  0  !gaussian's param
+ 6.2469600000000E-02  1.5789400000000E+00  1.7675600000000E+00   0  0  0  !gaussian's param
+ 
+ Se       34048       ! Atom, atomic_num
+ 2.6266000000000E+02      4          !norm. atomic volume, ngauss
+ 4.9931675819860E-01      1          !SO param
+ 0.0000000000000E+00      0          !af param for strain
+ 0.0000000000000E+00      0          !beta param
+-3.8255400000000E-01  0.0000000000000E+00  3.1839500000000E+00   0  0  0  !gaussian's param
+-3.3894500000000E-01  2.6779000000000E-01  1.0098100000000E+00   0  0  0  !gaussian's param
+ 2.9582400000000E-02  2.6672100000000E+00  7.7750400000000E-01   0  0  0  !gaussian's param
+ 1.7324100000000E+00 -1.7820700000000E+00  8.5545600000000E+00   0  0  0  !gaussian's param
+ Results for structure bulkCdSe.config               
+X-point:  1.00000  0.00000  0.00000
+The  8th state is the VBM of bulkCdSe.config     
+   Property       Ideal_Value   fitted_Value  Error    Weighted_Err**2   Weight
+   --------             ------   -------     -----     ------------
+ 
+evbm              -5.35971  -5.47023066  -0.11052547       4.25248674   100.000
+eg1c               1.76061   1.45165374  -0.30895678      76.98549317    50.000
+dpa               -2.90000  -3.85619108  -0.95619108    1087.15979580   100.000
+dpag15v            0.90000   0.96189348   0.06189348       1.89175470    20.000
+ 
+ Total Error =    1170.28953041081     
+Output flag from DQED, IGO =      3
+ 
+Computed X:
+ 
+  0.500000    
+  0.953856    
+  0.880478    
+ 
+L2 norm of the residual, FNORM =    1145.47    
+ 
+EPMFIT_DQED
+Normal end of execution.
+ 
+ Iteration no.          146
+ Values of the pseudopotential parameters
+ ----------------------------------------
+ Weight of Kinetic Energy   1.00000000000000     
+ 
+ 6.88000  0.80000  1.00000           ! Ecut, Smth, scalkin
+ 
+ Cd       48034       ! Atom, atomic_num
+ 2.6280000000000E+02      4          !norm. atomic volume, ngauss
+ 2.8411517587685E-02      1          !SO param
+ 8.6323884604130E-01      1          !af param for strain
+ 0.0000000000000E+00      0          !beta param
+-4.9480400000000E-01  0.0000000000000E+00  2.2508400000000E+00   0  0  0  !gaussian's param
+-8.8119900000000E-03  3.5127900000000E+00  2.3379600000000E+00   0  0  0  !gaussian's param
+ 1.1256500000000E+00 -1.0642300000000E+00  3.2992700000000E+00   0  0  0  !gaussian's param
+ 6.2469600000000E-02  1.5789400000000E+00  1.7675600000000E+00   0  0  0  !gaussian's param
+ 
+ Se       34048       ! Atom, atomic_num
+ 2.6266000000000E+02      4          !norm. atomic volume, ngauss
+ 4.3963751813228E-01      1          !SO param
+ 0.0000000000000E+00      0          !af param for strain
+ 0.0000000000000E+00      0          !beta param
+-3.8255400000000E-01  0.0000000000000E+00  3.1839500000000E+00   0  0  0  !gaussian's param
+-3.3894500000000E-01  2.6779000000000E-01  1.0098100000000E+00   0  0  0  !gaussian's param
+ 2.9582400000000E-02  2.6672100000000E+00  7.7750400000000E-01   0  0  0  !gaussian's param
+ 1.7324100000000E+00 -1.7820700000000E+00  8.5545600000000E+00   0  0  0  !gaussian's param
+ Results for structure bulkCdSe.config               
+X-point:  1.00000  0.00000  0.00000
+The  8th state is the VBM of bulkCdSe.config     
+   Property       Ideal_Value   fitted_Value  Error    Weighted_Err**2   Weight
+   --------             ------   -------     -----     ------------
+ 
+evbm              -5.35971  -5.54943790  -0.18973271      12.53148725   100.000
+eg1c               1.76061   1.53086097  -0.22974955      42.57187277    50.000
+dpa               -2.90000  -3.84374001  -0.94374001    1059.03115138   100.000
+dpag15v            0.90000   1.15190915   0.25190915      31.33739261    20.000
+ 
+ Total Error =    1145.47190401123     
+ Ending at
+June 23 2011   4:26:38.972 PM

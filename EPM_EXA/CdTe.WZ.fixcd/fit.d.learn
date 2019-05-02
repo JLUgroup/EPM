@@ -1,0 +1,15 @@
+1		! Number of structures; We can also have more to do the fitting 
+bulkCdTe.config
+12 12 12        ! Voicu never changes this
+input.CdTe      ! Target values; SO means spin-orbit coupling included
+0,  9,  ug.input ! Voicu also does not know this
+1.0, 0.0, 0.0   ! X-point ! The X valley is not well located at X point, such as 0.9 0 0 
+-----------------------------------
+1		! No. of pseudo files
+pseudo.CdTe.fit ! The corresponding information should be copied to restart the fitting with new weights (changing the max of 2~3)
+-----------------------------------
+1               ! Spin-Orbit (0 => OFF, 1=> ON)
+-----------------------------------
+0		! Fit kinetic energy scaling ( 0=> Fixed, 1=> Fit); do not change it
+1.0             ! Kinetic energy scaling factor
+6.88, 0.8       ! Ecut, Smth

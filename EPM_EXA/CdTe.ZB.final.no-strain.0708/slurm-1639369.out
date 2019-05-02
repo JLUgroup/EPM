@@ -1,0 +1,5 @@
+slurmd[rm48]: *** JOB 1639369 CANCELLED AT 2011-07-08T10:56:20 ***
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+libpthread.so.0    00002AC0F0F949DD  Unknown               Unknown  Unknown
+libiomp5.so        00002AC0F0E434A2  Unknown               Unknown  Unknown

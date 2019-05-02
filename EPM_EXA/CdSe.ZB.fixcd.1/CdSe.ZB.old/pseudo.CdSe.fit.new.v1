@@ -1,0 +1,37 @@
+    2       1             ! num_pot, pot. type
+ 6.88000  0.80000  1.00000           ! Ecut, Smth, scalkin
+ 
+ Cd       48034       ! Atom, atomic_num
+ 2.6280000000000E+02      4          !norm. atomic volume, ngauss
+ 5.6823035175370E-02      1          !SO param
+ 9.0499895622722E-01      1          !af param for strain
+ 0.0000000000000E+00      0          !beta param
+-4.9480400000000E-01  0.0000000000000E+00  2.2508400000000E+00   0  0  0  !gaussian's param
+-8.8119900000000E-03  3.5127900000000E+00  2.3379600000000E+00   0  0  0  !gaussian's param
+ 1.1256500000000E+00 -1.0642300000000E+00  3.2992700000000E+00   0  0  0  !gaussian's param
+ 6.2469600000000E-02  1.5789400000000E+00  1.7675600000000E+00   0  0  0  !gaussian's param
+ 
+ Se       34048       ! Atom, atomic_num
+ 2.6266000000000E+02      4          !norm. atomic volume, ngauss
+ 4.9931675819860E-01      1          !SO param
+ 0.0000000000000E+00      0          !af param for strain
+ 0.0000000000000E+00      0          !beta param
+-3.8255400000000E-01  0.0000000000000E+00  3.1839500000000E+00   0  0  0  !gaussian's param
+-3.3894500000000E-01  2.6779000000000E-01  1.0098100000000E+00   0  0  0  !gaussian's param
+ 2.9582400000000E-02  2.6672100000000E+00  7.7750400000000E-01   0  0  0  !gaussian's param
+ 1.7324100000000E+00 -1.7820700000000E+00  8.5545600000000E+00   0  0  0  !gaussian's param
+ 1.0000000000000E+00      0          !kin_scal param
+ 
+ SO calc.
+ **************************
+ Results for structure bulkCdSe.config               
+X-point:  1.00000  0.00000  0.00000
+The  8th state is the VBM of bulkCdSe.config     
+   Property       Ideal_Value   fitted_Value  Error    Weighted_Err**2   Weight
+   --------             ------   -------     -----     ------------
+ 
+evbm              -5.35971  -5.47023066  -0.11052547     106.31216858   500.000
+eg1c               1.76061   1.45165374  -0.30895678     307.94197267   100.000
+dpa               -2.90000  -3.85619108  -0.95619108     271.78994893    50.000
+dpag15v            0.90000   0.96189348   0.06189348       1.89175470    20.000
+ Total Error =    687.935844871298     

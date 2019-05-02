@@ -1,0 +1,26 @@
+#!/bin/bash --login
+#PBS -l ncpus=1,walltime=48:00:00
+#PBS -q default
+#PBS -N CdTe_t1
+#PBS -m abe
+#PBS -M jun-wei_luo@nrel.gov
+
+# example: load intel compiler and hdf5 libraries
+module load intel hdf5 fftw
+
+# change directories to the directory where you submitted the job
+cd $PBS_O_WORKDIR
+
+# example: run a serial job
+~/bin/multifit_dqed >fit.log
+#/uhome/jluo/bin/multifit.sa_dqed >fit.log
+
+# example: run an OpenMP job
+#export OMP_NUM_THREADS=$NCPUS
+#./a_mp.out
+
+# example: run an MPI job
+#mpirun -np $NCPUS a_mpi.out
+
+# end of example script
+

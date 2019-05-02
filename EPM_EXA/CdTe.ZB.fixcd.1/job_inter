@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --time=04:00:00             # WALLTIME
+#SBATCH -N 1                        # Number of nodes
+#SBATCH -n 1                        # Number of cores/processors
+#SBATCH --job-name epm      # Name of job
+#SBATCH --account=BES000            # program-based WCID for Comp Science Center users
+#SBATCH -p inter                  # see "Queues" section for details
+nodes=1                             # Number of nodes
+cores=1                             # Number MPI processes to start on each node; 8 cores/node
+
+~/bin/multifit_dqed >fit.log
+
+# Using the "numa_wrapper" option in your mpirun line improves performance. 
+# This wrapper locks the tasks to a specific core and locks the memory they 
+# allocate to the nearest memory controller, improving efficiency.
