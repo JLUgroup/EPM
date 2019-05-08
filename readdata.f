@@ -118,7 +118,7 @@ c -----------------------------------------------
          endif
 
          read (4,*) Ecut_t, Smth_t, scalkin_t
-         !dabs双精度实数绝对值
+         !dabs双精度实数绝对值,检查赝势文件中和输入文件中的三个参数是否一致
          if(dabs(Ecut_t-ecut_all)+dabs(Smth_t-smth_all)+
      &       dabs(scalkin_t-Sigma0).gt.0.01) then !大于greater than
          write(6,*) "Ecut,Smth and Sigma(scalkin) in fit.d and\
